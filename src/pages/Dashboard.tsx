@@ -205,10 +205,10 @@ export function Dashboard() {
         </div>
       )}
 
-      <div className="grid grid-cols-1 md:grid-cols-12 auto-rows-[minmax(120px,auto)] gap-4 flex-1">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 xl:grid-cols-12 gap-4 flex-1 auto-rows-fr">
         {/* Top Metric Cards */}
-        {overviewData.map((item) => (
-          <Card key={item.name} className="col-span-1 md:col-span-4 flex flex-col justify-between bg-slate-900 border-slate-800">
+{overviewData.map((item) => (
+          <Card key={item.name} className="col-span-full lg:col-span-4 flex flex-col justify-between bg-slate-900 border-slate-800">
             <CardContent className="h-full flex flex-col justify-between p-4">
               <div className="text-[10px] uppercase font-bold text-slate-500">{item.name}</div>
               <div className="flex items-end justify-between mt-4">
@@ -222,7 +222,7 @@ export function Dashboard() {
         ))}
 
         {/* Fear & Greed */}
-        <Card className="col-span-1 md:col-span-4 md:row-span-2 flex flex-col justify-center items-center relative overflow-hidden bg-[#0f172a] border-slate-800">
+        <Card className="col-span-full lg:col-span-3 lg:row-span-2 flex flex-col justify-center items-center relative overflow-hidden bg-[#0f172a] border-slate-800">
           <CardContent className="p-4 w-full h-full flex flex-col items-center justify-center">
             <div className="text-[10px] uppercase font-bold text-slate-500 mt-2 mb-6">Fear & Greed Index</div>
             <div className="relative w-32 h-16 overflow-hidden">
@@ -242,7 +242,7 @@ export function Dashboard() {
         </Card>
 
         {/* Real-time Momentum */}
-        <Card className="col-span-1 md:col-span-8 md:row-span-2 relative bg-slate-900/40 border-slate-800">
+        <Card className="col-span-full lg:col-span-9 lg:row-span-2 relative bg-slate-900/40 border-slate-800">
           <CardContent className="p-4 h-full flex flex-col justify-between">
             <div className="flex justify-between items-start">
               <div className="text-[10px] uppercase font-bold text-slate-500">Real-time Trading Volatility</div>
@@ -287,7 +287,7 @@ export function Dashboard() {
         </Card>
 
         {/* Economic Calendar */}
-        <Card className="col-span-1 md:col-span-4 md:row-span-3 bg-slate-900 border-slate-800">
+        <Card className="col-span-full lg:col-span-3 lg:row-span-3 bg-slate-900 border-slate-800">
           <CardContent className="p-4 h-full flex flex-col">
             <div className="text-[10px] uppercase font-bold text-slate-500 mb-4">Economic Calendar</div>
             <div className="space-y-4 flex-1">
@@ -316,7 +316,7 @@ export function Dashboard() {
         </Card>
 
         {/* Recent Analysis */}
-        <Card className="col-span-1 md:col-span-3 md:row-span-2 bg-slate-900 border-slate-800">
+        <Card className="col-span-full lg:col-span-3 lg:row-span-2 bg-slate-900 border-slate-800">
           <CardContent className="p-4 flex flex-col h-full">
             <div className="text-[10px] uppercase font-bold text-slate-500 mb-3">Recent Analysis</div>
             <div className="space-y-2 flex-1">
@@ -345,7 +345,7 @@ export function Dashboard() {
         </Card>
 
         {/* Value Investing Quick */}
-        <Card className="col-span-1 md:col-span-5 md:row-span-2 flex flex-col justify-center bg-indigo-900/10 border-indigo-500/20">
+        <Card className="col-span-full lg:col-span-6 lg:row-span-2 flex flex-col justify-center bg-indigo-900/10 border-indigo-500/20">
           <CardContent className="p-4 w-full">
             <div className="flex gap-4 items-center h-full">
               <div className="p-3 bg-indigo-600 rounded-xl shadow-lg shadow-indigo-600/20 shrink-0">

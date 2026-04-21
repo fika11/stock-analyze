@@ -1,3 +1,4 @@
+
 import { Link, useLocation } from 'react-router-dom';
 import { LayoutDashboard, LineChart, Newspaper, Activity, Calculator, HelpCircle, Menu } from 'lucide-react';
 import { cn } from '@/lib/utils';
@@ -15,7 +16,7 @@ const navItems = [
 
 export function Layout({ children }: { children: React.ReactNode }) {
   const [isSidebarOpen, setSidebarOpen] = useState(true);
-  const location = useLocation();
+
 
   return (
     <div className="min-h-screen bg-[#020617] text-slate-50 flex overflow-hidden font-sans">
@@ -73,7 +74,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </aside>
 
       {/* Main content */}
-      <main className="flex-1 p-6 overflow-hidden flex flex-col gap-6 bg-[#020617]">
+      <main className="flex-1 p-6 overflow-y-auto flex flex-col gap-6 bg-[#020617]">
         <button
           onClick={() => setSidebarOpen(!isSidebarOpen)}
           className="p-2 lg:hidden rounded-lg bg-slate-800 text-slate-400 hover:text-white self-start"
